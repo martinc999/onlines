@@ -99,6 +99,7 @@ var SampleApp = function() {
 
         // Routes for /health, /asciimo, /env and /
         self.routes['/health'] = function(req, res) {
+		    console.log('%s: Node server started on 3', Date(Date.now() ));
 			content += "3";
             res.send('<html>\n' +
                      '  <head><title>Node.js Process Env</title></head>\n' +
