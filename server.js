@@ -108,6 +108,7 @@ var SampleApp = function() {
         };
 
         self.routes['/env'] = function(req, res) {
+		    console.log('%s: Node server started on %s:%d ...', Date(Date.now() ), self.ipaddress, self.port);
             var content = 'Version: ' + process.version + '\n<br/>\n' +
                           'Env: {<br/>\n<pre>';
             //  Add env entries.
