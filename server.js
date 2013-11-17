@@ -99,8 +99,10 @@ var SampleApp = function() {
 
         // Routes for /health, /asciimo, /env and /
         self.routes['/health'] = function(req, res) {
-		
-            res.send('2');
+			content += "2";
+            res.send('<html>\n' +
+                     '  <head><title>Node.js Process Env</title></head>\n' +
+                     '  <body>\n<br/>\n' + content + '</body>\n</html>');
         };
 
         self.routes['/asciimo'] = function(req, res) {
